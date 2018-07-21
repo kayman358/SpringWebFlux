@@ -6,7 +6,6 @@
 package com.spring.webflux.model;
 
 import java.util.Date;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -14,6 +13,7 @@ import lombok.Data;
  * @author Ibrahim.Arowolo
  */
 @Data
+
 public class EventModel {
     private final long id;
     private final Date date;
