@@ -31,7 +31,7 @@ public class ReactiveClient {
 
     CommandLineRunner demo(WebClient client) {
 
-      return args -> {client.get().uri("/events").accept(MediaType.TEXT_EVENT_STREAM).exchange().flatMapMany(cr -> cr.bodyToFlux(EventModel.class)).subscribe(System.out::println);};
+      return args -> {client.get().uri("/events").accept(MediaType.TEXT_EVENT_STREAM).exchange().flatMapMany(ClientResponse  -> ClientResponse .bodyToFlux(EventModel.class)).subscribe(System.out::println);};
 
     }
 
